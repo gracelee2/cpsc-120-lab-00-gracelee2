@@ -1,0 +1,11 @@
+name: Header
+on: push
+
+jobs:
+  build:
+    name: Header
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Header Check - Make sure the file(s) have the correct header
+        run: python3 .action/header_check.py *.cc

@@ -1,0 +1,13 @@
+name: A Docker-less workflow for CPSC 120
+on: push
+
+jobs:
+  build:
+    name: Hello world actions for CPSC 120
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check Header
+        run: python3 .action/headercheck.py hello_world.cc
+      - name: Run Shell Script
+        run: bash .action/entrypoint.sh

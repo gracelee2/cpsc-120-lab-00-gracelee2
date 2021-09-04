@@ -1,0 +1,11 @@
+name: Compile
+on: push
+
+jobs:
+  build:
+    name: Compile
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compile Check - Make sure the files compile
+        run: python3 .action/compile_badge.py *.cc

@@ -1,0 +1,11 @@
+name: C++ Format
+on: push
+
+jobs:
+  build:
+    name: C++ Format
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Format Check - Make sure the files adhere to Google C++ style
+        run: python3 .action/format_check.py *.cc

@@ -1,0 +1,11 @@
+name: Lint
+on: push
+
+jobs:
+  build:
+    name: Lint
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint Check - Make sure the files follow good coding practices
+        run: python3 .action/lint_check.py hello_world.cc
