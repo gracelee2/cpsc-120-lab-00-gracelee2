@@ -2,12 +2,13 @@
 // CPSC 120-18
 // 2021-09-08
 // grace1@csu.fullerton.edu
-//@gracelee2
+// @gracelee2
 //
 // Lab 00-00
 //
 // This is my first program and it prints out Hello Grace!
 //
+
 #include <iostream>
 
 using namespace std;
